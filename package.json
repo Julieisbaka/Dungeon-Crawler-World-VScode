@@ -90,5 +90,18 @@
     },
     "main": "./extension.js",
     "readme": "README.md",
-    "license": "MIT"
+    "license": "MIT",
+    "author": {
+        "name": "JulieISBaka",
+        "url": "https://github.com/Julieisbaka"
+    },
+    "bugs": {
+        "url": "https://github.com/Julieisbaka/Dungeon-Crawler-World-VScode/issues"
+    },
+    "capabilities": {
+        "untrustedWorkspaces": {
+            "supported": "limited",
+            "description": "Support in untrusted workspaces is limited to JSON schema validation and linting for markdown files. Other features may not be available in untrusted workspaces."
+        }
+    }
 }
