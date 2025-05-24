@@ -5,6 +5,16 @@ All notable changes to the "Dungeon Crawler World" extension will be documented 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Table of Contents
+
+- [Change Log](#change-log)
+  - [Table of Contents](#table-of-contents)
+  - [\[0.0.2\] - Unreleased](#002---unreleased)
+    - [Added](#added)
+    - [Changed](#changed)
+  - [\[0.0.1\] - Initial Release](#001---initial-release)
+    - [Added](#added-1)
+
 ## [0.0.2] - Unreleased
 
 ### Added
@@ -15,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Improved console logging
+- Updated JSON schema validation to be more robust
 
 ## [0.0.1] - Initial Release
 

@@ -40,6 +40,7 @@
             },
             {
                 "fileMatch": [
+                    "!save-state.json",
                     "config.json",
                     "!package.json",
                     "!tsconfig.json",
@@ -55,6 +56,7 @@
             },
             {
                 "fileMatch": [
+                    "!save-state.json",
                     "!config.json",
                     "!package.json",
                     "!tsconfig.json",

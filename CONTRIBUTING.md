@@ -2,6 +2,23 @@
 
 Thank you for your interest in contributing to the Dungeon Crawler World VSCode extension! This document provides guidelines and information for contributors.
 
+## Table of Contents
+
+- [Contributing to Dungeon Crawler World VSCode Extension](#contributing-to-dungeon-crawler-world-vscode-extension)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Development Setup](#development-setup)
+  - [How to Contribute](#how-to-contribute)
+    - [Reporting Issues](#reporting-issues)
+    - [Submitting Changes](#submitting-changes)
+  - [Coding Standards](#coding-standards)
+    - [JavaScript](#javascript)
+    - [JSON](#json)
+    - [Commit Messages](#commit-messages)
+  - [Project Structure](#project-structure)
+  - [Questions?](#questions)
+
 ## Getting Started
 
 ### Prerequisites
@@ -78,13 +95,6 @@ Thank you for your interest in contributing to the Dungeon Crawler World VSCode 
 ├── CHANGELOG.md         # Version history
 └── CONTRIBUTING.md      # This file
 ```
-
-## Testing
-
-- Test the extension in the Extension Development Host
-- Verify JSON schema validation works correctly
-- Test the markdown linting command
-- Ensure the auto-deactivation feature works as expected
 
 ## Questions?
 
