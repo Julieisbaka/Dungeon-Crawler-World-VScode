@@ -49,5 +49,8 @@
     },
     "activationEvents": [
         "onCommand:extension.lintMarkdownLength"
-    ]
+    ],
+    "engines": {
+        "vscode": "^1.74.0"
+    }
 }
