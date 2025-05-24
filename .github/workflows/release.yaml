@@ -28,11 +28,15 @@ jobs:
       - name: Package VSCode extension
         run: vsce package
 
+      - name: Extract version from package.json
+        id: get_version
+        run: echo "VERSION=v$(node -p \"require('./package.json').version\")" >> $GITHUB_ENV
+
       - name: Create GitHub Release
         id: create_release
         uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631 # pin to immutable version
         with:
-          tag_name: ${{ github.ref_name || github.sha }}
+          tag_name: ${{ env.VERSION }}
           name: VSCode Extension Release
           draft: false
           prerelease: false
