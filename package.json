@@ -4,6 +4,10 @@
     "version": "0.0.1",
     "description": "A VSCode extension for the Dungeon Crawler World project, providing JSON schema validation and linting for markdown files.",
     "publisher": "JulieISBaka",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Julieisbaka/Dungeon-Crawler-World-VScode.git"
+    },
     "contributes": {
         "jsonValidation": [
             {
