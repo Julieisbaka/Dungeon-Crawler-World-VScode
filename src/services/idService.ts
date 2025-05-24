@@ -23,7 +23,10 @@ export class IDService {
             this.lastFetchTime = now;
             return this.cachedIDs;
         } catch (error) {
-            console.error('Failed to fetch ID file:', error);
+            const sanitizedError = error instanceof Error
+                ? error.message.replace(/\n|\r/g, '')
+                : String(error).replace(/\n|\r/g, '');
+            console.error('Failed to fetch ID file:', sanitizedError);
             vscode.window.showWarningMessage('Failed to fetch Dungeon Crawler World IDs. Using cached data if available.');
             return this.cachedIDs;
         }
