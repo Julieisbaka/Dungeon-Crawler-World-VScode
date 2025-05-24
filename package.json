@@ -1,4 +1,9 @@
 {
+    "name": "dungeon-crawler-world",
+    "displayName": "Dungeon Crawler World",
+    "version": "0.0.1",
+    "description": "A VSCode extension for the Dungeon Crawler World project, providing JSON schema validation and linting for markdown files.",
+    "publisher": "JulieISBaka",
     "contributes": {
         "jsonValidation": [
             {
