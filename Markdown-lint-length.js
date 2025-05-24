@@ -1,3 +1,23 @@
+/**
+ * @file Markdown Line Length Linter
+ * 
+ * A utility script that checks Markdown files for lines exceeding a maximum length,
+ * while ignoring comment lines. This helps maintain consistent and readable Markdown files.
+ * 
+ * The script recursively searches through directories to find all .md files and
+ * reports any lines that exceed the configured maximum length (default: 120 characters).
+ * 
+ * @example
+ * // Check all Markdown files in the current directory:
+ * node Markdown-lint-length.js
+ * 
+ * // Check all Markdown files in a specific directory:
+ * node Markdown-lint-length.js ./docs
+ * 
+ * @security
+ * The script includes path validation to ensure that the target directory
+ * is within the current working directory, preventing directory traversal attacks.
+ */
 import { readFileSync, readdirSync, statSync } from "fs";
 import { join } from "path";
 

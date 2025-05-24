@@ -72,23 +72,24 @@ Thank you for your interest in contributing to the Dungeon Crawler World VSCode 
 ## Coding Standards
 
 ### JavaScript
-- Use 4 spaces for indentation
+- Use $4$ spaces for indentation
 - Use semicolons
 - Use meaningful variable and function names
 - Add comments for complex logic
 
 ### JSON
-- Use 4 spaces for indentation
+- Use $4$ spaces for indentation
 - Validate JSON schemas before submitting
 
 ### Commit Messages
 - Use present tense ("Add feature" not "Added feature")
 - Use imperative mood ("Move cursor to..." not "Moves cursor to...")
-- Limit the first line to 72 characters or less
+- Limit the first line to $72$ characters or less
 
 ## Project Structure
 
-```
+```yaml
+Dungeon-Crawler-World-VScode/
 ├── extension.js          # Main extension logic
 ├── package.json          # Extension manifest
 ├── README.md            # Project documentation

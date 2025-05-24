@@ -2,20 +2,20 @@
 
 All notable changes to the "Dungeon Crawler World" extension will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Table of Contents
 
 - [Change Log](#change-log)
   - [Table of Contents](#table-of-contents)
-  - [\[0.0.2\] - Unreleased](#002---unreleased)
+  - [0.0.2 - Unreleased](#002---unreleased)
     - [Added](#added)
     - [Changed](#changed)
-  - [\[0.0.1\] - Initial Release](#001---initial-release)
+  - [0.0.1 - Initial Release](#001---initial-release)
     - [Added](#added-1)
 
-## [0.0.2] - Unreleased
+## 0.0.2 - Unreleased
 
 ### Added
 - Configuration option `autoDeactivateOutsideRepo` to control extension activation
@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved console logging
 - Updated JSON schema validation to be more robust
 
-## [0.0.1] - Initial Release
+## [0.0.1 - Initial Release](https://github.com/Julieisbaka/Dungeon-Crawler-World-VScode/releases/tag/0.0.1)
 
 ### Added
 - JSON schema validation for Dungeon Crawler World project files
