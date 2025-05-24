@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history and tags
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -30,7 +32,14 @@ jobs:
 
       - name: Extract version from package.json
         id: get_version
-        run: echo "version=$(node -p 'require(\"./package.json\").version')" >> $GITHUB_OUTPUT
+        run: |
+          VERSION=$(node -p 'require("./package.json").version')
+          if [ -z "$VERSION" ]; then
+            echo "Failed to extract version from package.json"
+            exit 1
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Extracted version: $VERSION"
 
       - name: Log version from package.json
         run: |
