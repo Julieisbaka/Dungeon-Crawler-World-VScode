@@ -1,0 +1,53 @@
+{
+    "contributes": {
+        "jsonValidation": [
+            {
+                "fileMatch": [
+                    "save-state.json",
+                    "!config.json",
+                    "!package.json",
+                    "!tsconfig.json",
+                    "!markdownlint.json",
+                    "!.vscode/",
+                    "!github/"
+                ],
+                "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/Save.json"
+            },
+            {
+                "fileMatch": [
+                    "config.json",
+                    "!package.json",
+                    "!tsconfig.json",
+                    "!markdownlint.json",
+                    "!.vscode/",
+                    "!github/"
+                ],
+                "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/Shader.json"
+            },
+            {
+                "fileMatch": "!./",
+                "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/common-definitions.json"
+            },
+            {
+                "fileMatch": [
+                    "!config.json",
+                    "!package.json",
+                    "!tsconfig.json",
+                    "!markdownlint.json",
+                    "!.vscode/",
+                    "!github/"
+                ],
+                "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/schema.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "extension.lintMarkdownLength",
+                "title": "Lint Markdown Line Length"
+            }
+        ]
+    },
+    "activationEvents": [
+        "onCommand:extension.lintMarkdownLength"
+    ]
+}
