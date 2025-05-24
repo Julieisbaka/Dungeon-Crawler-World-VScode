@@ -9,7 +9,7 @@
                     "!tsconfig.json",
                     "!markdownlint.json",
                     "!.vscode/",
-                    "!github/"
+                    "!.github/"
                 ],
                 "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/Save.json"
             },
@@ -20,7 +20,7 @@
                     "!tsconfig.json",
                     "!markdownlint.json",
                     "!.vscode/",
-                    "!github/"
+                    "!.github/"
                 ],
                 "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/Shader.json"
             },
@@ -35,7 +35,7 @@
                     "!tsconfig.json",
                     "!markdownlint.json",
                     "!.vscode/",
-                    "!github/"
+                    "!.github/"
                 ],
                 "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/schema.json"
             }
