@@ -58,7 +58,7 @@ jobs:
         uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631 # pin to immutable version
         with:
           tag_name: ${{ steps.get_version.outputs.version }}
-          name: VSCode Extension Release
+          name: "Dungeon Crawler World: ${{ steps.get_version.outputs.version }}"
           draft: false
           prerelease: false
         env:
