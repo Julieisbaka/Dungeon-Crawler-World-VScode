@@ -1,14 +1,30 @@
 {
     "name": "dungeon-crawler-world",
     "displayName": "Dungeon Crawler World",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A VSCode extension for the Dungeon Crawler World project, providing JSON schema validation and linting for markdown files.",
     "publisher": "JulieISBaka",
+    "categories": [
+        "Other",
+        "Linters"
+    ],
+    "pricing": "Free",
     "repository": {
         "type": "git",
         "url": "https://github.com/Julieisbaka/Dungeon-Crawler-World-VScode.git"
     },
     "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Dungeon Crawler World",
+            "properties": {
+                "dungeonCrawlerWorld.autoDeactivateOutsideRepo": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Automatically deactivate extension features when not in a Dungeon Crawler World repository"
+                }
+            }
+        },
         "jsonValidation": [
             {
                 "fileMatch": [
@@ -62,5 +78,7 @@
     "engines": {
         "vscode": "^1.74.0"
     },
-    "main": "./extension.js"
+    "main": "./extension.js",
+    "readme": "README.md",
+    "license": "MIT"
 }
