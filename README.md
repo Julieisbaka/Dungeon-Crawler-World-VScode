@@ -6,3 +6,4 @@ An extension for Visual Studio Code that provides JSON schema validation and mar
 
 - JSON schema validation for project files
 - Markdown linting for improved readability and consistency
+- Backend support for ID snippets

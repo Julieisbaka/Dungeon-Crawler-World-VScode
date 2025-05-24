@@ -30,12 +30,14 @@ Thank you for your interest in contributing to the Dungeon Crawler World VSCode 
 ### Development Setup
 
 1. Fork and clone the repository:
+
    ```bash
    git clone https://github.com/your-username/Dungeon-Crawler-World-VScode.git
    cd Dungeon-Crawler-World-VScode
    ```
 
 2. Open the project in VSCode:
+
    ```bash
    code .
    ```
@@ -54,6 +56,7 @@ Thank you for your interest in contributing to the Dungeon Crawler World VSCode 
 ### Submitting Changes
 
 1. Create a new branch for your feature or fix:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -63,6 +66,7 @@ Thank you for your interest in contributing to the Dungeon Crawler World VSCode 
 3. Test your changes thoroughly
 
 4. Commit your changes with a descriptive message:
+
    ```bash
    git commit -m "Add feature: description of your changes"
    ```
@@ -72,16 +76,19 @@ Thank you for your interest in contributing to the Dungeon Crawler World VSCode 
 ## Coding Standards
 
 ### JavaScript
+
 - Use $4$ spaces for indentation
 - Use semicolons
 - Use meaningful variable and function names
 - Add comments for complex logic
 
 ### JSON
+
 - Use $4$ spaces for indentation
 - Validate JSON schemas before submitting
 
 ### Commit Messages
+
 - Use present tense ("Add feature" not "Added feature")
 - Use imperative mood ("Move cursor to..." not "Moves cursor to...")
 - Limit the first line to $72$ characters or less
@@ -100,6 +107,7 @@ Dungeon-Crawler-World-VScode/
 ## Questions?
 
 If you have questions about contributing, feel free to:
+
 - Open an issue for discussion
 - Contact the maintainers
 

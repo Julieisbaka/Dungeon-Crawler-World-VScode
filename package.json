@@ -71,6 +71,11 @@
             {
                 "command": "extension.lintMarkdownLength",
                 "title": "Lint Markdown Line Length"
+            },
+            {
+                "command": "dungeonCrawlerWorld.refreshIDs",
+                "title": "Refresh Dungeon Crawler World IDs",
+                "category": "Dungeon Crawler World"
             }
         ],
         "keybindings": [
@@ -89,6 +94,9 @@
         "vscode": "^1.74.0"
     },
     "main": "./extension.js",
+    "devDependencies": {
+        "@types/vscode": "^1.74.0"
+    },
     "readme": "README.md",
     "license": "MIT",
     "author": {
