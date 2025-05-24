@@ -57,5 +57,6 @@
     ],
     "engines": {
         "vscode": "^1.74.0"
-    }
+    },
+    "main": "./extension.js"
 }
