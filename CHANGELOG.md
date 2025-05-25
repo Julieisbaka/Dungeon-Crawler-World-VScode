@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [Change Log](#change-log)
   - [Table of Contents](#table-of-contents)
-  - [0.0.3 - Unreleased](#003---unreleased)
+  - [0.0.3](#003)
     - [Added](#added)
     - [Changed](#changed)
     - [Removed](#removed)
@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - [0.0.1 - Initial Release](#001---initial-release)
     - [Added](#added-2)
 
-## 0.0.3 - Unreleased
+## [0.0.3](https://github.com/Julieisbaka/Dungeon-Crawler-World-VScode/releases/tag/0.0.3)
 
 ### Added
 
