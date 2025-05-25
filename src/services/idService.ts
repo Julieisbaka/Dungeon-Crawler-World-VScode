@@ -100,6 +100,19 @@ export class IDService {
             .join('\n');
     }
 
+    private sanitizeLogInput(input: any): string {
+        if (input === null || input === undefined) {
+            return String(input);
+        }
+        
+        if (input instanceof Error) {
+            return input.message.replace(/[\r\n]/g, ' ');
+        }
+        
+        // Convert to string and sanitize
+        return String(input).replace(/[\r\n]/g, ' ');
+    }
+
     refreshCache(): void {
         this.lastFetchTime = 0;
         this.cachedIDs = {};
