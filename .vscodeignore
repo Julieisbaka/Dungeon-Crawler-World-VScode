@@ -2,3 +2,4 @@
 .ts
 .gitignore
 tsconfig.json
+.editorconfig
