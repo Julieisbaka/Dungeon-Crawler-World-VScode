@@ -1,3 +1,4 @@
 .github/
 .ts
 .gitignore
+tsconfig.json
