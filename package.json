@@ -96,7 +96,7 @@
     "engines": {
         "vscode": "^1.74.0"
     },
-    "main": "./out/extension.js",
+    "main": "./src/extension.ts",
     "dependencies": {
         "https": "^1.0.0"
     },
