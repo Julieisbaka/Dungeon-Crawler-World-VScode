@@ -1,7 +1,7 @@
 {
     "name": "dungeon-crawler-world",
     "displayName": "Dungeon Crawler World",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A VSCode extension for the Dungeon Crawler World project, providing JSON schema validation and linting for markdown files.",
     "publisher": "JulieISBaka",
     "categories": [
@@ -105,7 +105,8 @@
         "@types/node": "^22.x",
         "typescript": "^5.8.3",
         "@vscode/test-electron": "^2.2.0"
-    },    "scripts": {
+    },
+    "scripts": {
         "build": "tsc -p ./",
         "watch": "tsc -watch -p ./"
     },
