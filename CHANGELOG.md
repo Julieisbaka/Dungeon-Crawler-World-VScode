@@ -9,20 +9,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [Change Log](#change-log)
   - [Table of Contents](#table-of-contents)
-  - [0.0.4 - Unreleased](#004---unreleased)
-    - [Changed](#changed)
-  - [0.0.3](#003)
+  - [0.0.5 - Unreleased](#005---unreleased)
     - [Added](#added)
+    - [Changed](#changed)
+  - [0.0.4](#004)
     - [Changed](#changed-1)
-    - [Removed](#removed)
-  - [0.0.2](#002)
+  - [0.0.3](#003)
     - [Added](#added-1)
     - [Changed](#changed-2)
+    - [Removed](#removed)
+  - [0.0.2](#002)
+    - [Added](#added-2)
+    - [Changed](#changed-3)
     - [Removed](#removed-1)
   - [0.0.1 - Initial Release](#001---initial-release)
-    - [Added](#added-2)
+    - [Added](#added-3)
 
-## [0.0.4](https://github.com/Julieisbaka/Dungeon-Crawler-World-VScode/releases/tag/0.0.4) - Unreleased
+## 0.0.5 - Unreleased
+
+### Added
+
+- Add command to generate a new pfx certificate
+- Add keybind support for new command
+
+### Changed
+
+- Linted and formatted files
+- Fixed minor security issues
+- Reduced file size
+- Fix bug in changelog
+- Extend README
+
+## [0.0.4](https://github.com/Julieisbaka/Dungeon-Crawler-World-VScode/releases/tag/0.0.4)
 
 ### Changed
 

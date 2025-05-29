@@ -1,3 +1,0 @@
-[*.md]
-# Ignore MD024 duplicate heading rule
-markdownlint.MD024 = false
