@@ -56,12 +56,44 @@ jobs:
           git tag ${{ steps.get_version.outputs.version }}
           git push origin ${{ steps.get_version.outputs.version }}
 
+      - name: Generate release description from commits
+        id: generate_description
+        run: |
+          # Get the previous tag
+          PREVIOUS_TAG=$(git tag --sort=-version:refname | grep -v "${{ steps.get_version.outputs.version }}" | head -n 1)
+          
+          if [ -z "$PREVIOUS_TAG" ]; then
+            echo "No previous tag found, using all commits"
+            COMMIT_RANGE="HEAD"
+          else
+            echo "Previous tag: $PREVIOUS_TAG"
+            COMMIT_RANGE="$PREVIOUS_TAG..HEAD"
+          fi
+          
+          # Get commit messages and format them
+          DESCRIPTION=$(git log $COMMIT_RANGE --pretty=format:"- %s" --no-merges | head -20)
+          
+          if [ -z "$DESCRIPTION" ]; then
+            DESCRIPTION="- Initial release"
+          fi
+          
+          # Save the description to output
+          echo "description<<EOF" >> $GITHUB_OUTPUT
+          echo "## What's Changed" >> $GITHUB_OUTPUT
+          echo "" >> $GITHUB_OUTPUT
+          echo "$DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          
+          echo "Generated description:"
+          echo "$DESCRIPTION"
+
       - name: Create GitHub Release
         id: create_release
         uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631 # pin to immutable version
         with:
           tag_name: ${{ steps.get_version.outputs.version }}
           name: "Dungeon Crawler World Extension: ${{ steps.get_version.outputs.version }}"
+          body: ${{ steps.generate_description.outputs.description }}
           draft: false
           prerelease: false
         env:

@@ -109,11 +109,107 @@ export function activate(context: vscode.ExtensionContext) {
                 vscode.window.showInformationMessage(stdout, { modal: true });
             } else {
                 vscode.window.showInformationMessage('No Markdown line length issues found.');
-            }
-        });
+            }        });
     });
 
-    context.subscriptions.push(completionDisposable, hoverDisposable, refreshCommand, lintCommand);
+    // Register PFX certificate generation command
+    const generatePfxCommand = vscode.commands.registerCommand('dungeonCrawlerWorld.generatePfxCertificate', async () => {
+        try {
+            const workspaceFolders = vscode.workspace.workspaceFolders;
+            if (!workspaceFolders) {
+                vscode.window.showErrorMessage('No workspace folder open.');
+                return;
+            }
+
+            // Prompt for certificate details
+            const commonName = await vscode.window.showInputBox({
+                prompt: 'Enter Common Name (CN) for the certificate',
+                placeholder: 'e.g., example.com or localhost'
+            });
+
+            if (!commonName) {
+                return;
+            }
+
+            const password = await vscode.window.showInputBox({
+                prompt: 'Enter password for the PFX file',
+                password: true,
+                placeholder: 'Password to protect the PFX file'
+            });
+
+            if (!password) {
+                return;
+            }
+
+            const certName = commonName.replace(/[^a-zA-Z0-9]/g, '_');
+            
+            // Show progress
+            vscode.window.withProgress({
+                location: vscode.ProgressLocation.Notification,
+                title: 'Generating PFX Certificate...',
+                cancellable: false
+            }, async (progress: { report: (arg0: { increment: number; message: string; }) => void; }) => {
+                progress.report({ increment: 20, message: 'Creating private key...' });
+
+                const cwd = workspaceFolders[0].uri.fsPath;
+                const keyPath = path.join(cwd, `${certName}.key`);
+                const certPath = path.join(cwd, `${certName}.crt`);
+                const pfxPath = path.join(cwd, `${certName}.pfx`);
+
+                return new Promise<void>((resolve, reject) => {
+                    // Generate private key
+                    exec(`openssl genrsa -out "${keyPath}" 2048`, (err) => {
+                        if (err) {
+                            reject(new Error(`Failed to generate private key: ${err.message}`));
+                            return;
+                        }
+
+                        progress.report({ increment: 40, message: 'Creating certificate...' });
+
+                        // Generate certificate
+                        const certCommand = `openssl req -new -x509 -key "${keyPath}" -out "${certPath}" -days 365 -subj "/CN=${commonName}"`;
+                        exec(certCommand, (err) => {
+                            if (err) {
+                                reject(new Error(`Failed to generate certificate: ${err.message}`));
+                                return;
+                            }
+
+                            progress.report({ increment: 70, message: 'Creating PFX file...' });
+
+                            // Create PFX file
+                            const pfxCommand = `openssl pkcs12 -export -out "${pfxPath}" -inkey "${keyPath}" -in "${certPath}" -password pass:${password}`;
+                            exec(pfxCommand, (err) => {
+                                if (err) {
+                                    reject(new Error(`Failed to create PFX file: ${err.message}`));
+                                    return;
+                                }
+
+                                progress.report({ increment: 100, message: 'Cleaning up...' });
+
+                                // Clean up temporary files
+                                try {
+                                    fs.unlinkSync(keyPath);
+                                    fs.unlinkSync(certPath);
+                                } catch (cleanupErr) {
+                                    console.warn('Failed to clean up temporary files:', cleanupErr);
+                                }
+
+                                resolve();
+                            });
+                        });
+                    });
+                });
+            });
+
+            vscode.window.showInformationMessage(`PFX certificate generated successfully: ${certName}.pfx`);
+
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+            vscode.window.showErrorMessage(`Failed to generate PFX certificate: ${errorMessage}`);
+        }
+    });
+
+    context.subscriptions.push(completionDisposable, hoverDisposable, refreshCommand, lintCommand, generatePfxCommand);
 }
 
 export function deactivate() {}

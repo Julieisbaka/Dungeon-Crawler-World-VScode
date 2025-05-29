@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reduced file size
 - Fix bug in changelog
 - Extend README
+- Fix command registration
 
 ## [0.0.4](https://github.com/Julieisbaka/Dungeon-Crawler-World-VScode/releases/tag/0.0.4)
 

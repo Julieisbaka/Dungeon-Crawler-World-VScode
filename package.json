@@ -1,7 +1,7 @@
 {
     "name": "dungeon-crawler-world",
     "displayName": "Dungeon Crawler World",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "A VSCode extension for the Dungeon Crawler World project, providing JSON schema validation and linting for markdown files.",
     "publisher": "JulieISBaka",
     "categories": [
@@ -76,6 +76,11 @@
                 "command": "dungeonCrawlerWorld.refreshIDs",
                 "title": "Refresh Dungeon Crawler World IDs",
                 "category": "Dungeon Crawler World"
+            },
+            {
+                "command": "dungeonCrawlerWorld.generatePfxCertificate",
+                "title": "Generate New PFX Certificate",
+                "category": "Dungeon Crawler World"
             }
         ],
         "keybindings": [
@@ -84,12 +89,19 @@
                 "key": "ctrl+shift+l",
                 "mac": "cmd+shift+l",
                 "when": "editorLangId == markdown"
+            },
+            {
+                "command": "dungeonCrawlerWorld.generatePfxCertificate",
+                "key": "ctrl+shift+p",
+                "mac": "cmd+shift+p",
+                "when": "resourceExtname == .pfx || resourceExtname == .p12"
             }
         ]
     },
     "activationEvents": [
         "onCommand:extension.lintMarkdownLength",
         "onCommand:dungeonCrawlerWorld.refreshIDs",
+        "onCommand:dungeonCrawlerWorld.generatePfxCertificate",
         "onLanguage:json",
         "onLanguage:jsonc"
     ],
