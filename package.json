@@ -105,8 +105,8 @@
         "@types/node": "^22.x",
         "typescript": "^5.8.3",
         "@vscode/test-electron": "^2.2.0"
-    },
-    "scripts": {
+    },    "scripts": {
+        "build": "tsc -p ./",
         "watch": "tsc -watch -p ./"
     },
     "readme": "README.md",

@@ -9,16 +9,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [Change Log](#change-log)
   - [Table of Contents](#table-of-contents)
+  - [0.0.4 - Unreleased](#004---unreleased)
+    - [Changed](#changed)
   - [0.0.3](#003)
     - [Added](#added)
-    - [Changed](#changed)
+    - [Changed](#changed-1)
     - [Removed](#removed)
   - [0.0.2](#002)
     - [Added](#added-1)
-    - [Changed](#changed-1)
+    - [Changed](#changed-2)
     - [Removed](#removed-1)
   - [0.0.1 - Initial Release](#001---initial-release)
     - [Added](#added-2)
+
+## [0.0.4](https://github.com/Julieisbaka/Dungeon-Crawler-World-VScode/releases/tag/0.0.4) - Unreleased
+
+### Changed
+
+- Updated `package.json` metadata
+- Improved error handling and logging
+- Refactored code for better maintainability
+- Updated dependencies to latest versions
+- Fix build errors
 
 ## [0.0.3](https://github.com/Julieisbaka/Dungeon-Crawler-World-VScode/releases/tag/0.0.3)
 
