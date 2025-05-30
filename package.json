@@ -24,8 +24,7 @@
                     "description": "Automatically deactivate extension features when not in a Dungeon Crawler World repository"
                 }
             }
-        },
-        "jsonValidation": [
+        },        "jsonValidation": [
             {
                 "fileMatch": [
                     "save-state.json",
@@ -36,7 +35,7 @@
                     "!.vscode/",
                     "!.github/"
                 ],
-                "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/Save.json"
+                "url": "https://raw.githubusercontent.com/Julieisbaka/Dungeon-crawler-world/Main/Scheme/Save.json"
             },
             {
                 "fileMatch": [
@@ -48,11 +47,11 @@
                     "!.vscode/",
                     "!.github/"
                 ],
-                "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/Shader.json"
+                "url": "https://raw.githubusercontent.com/Julieisbaka/Dungeon-crawler-world/Main/Scheme/Shader.json"
             },
             {
                 "fileMatch": "!./",
-                "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/common-definitions.json"
+                "url": "https://raw.githubusercontent.com/Julieisbaka/Dungeon-crawler-world/Main/Scheme/common-definitions.json"
             },
             {
                 "fileMatch": [
@@ -64,7 +63,7 @@
                     "!.vscode/",
                     "!.github/"
                 ],
-                "url": "https://github.com/Julieisbaka/Dungeon-crawler-world/blob/Main/Scheme/schema.json"
+                "url": "https://raw.githubusercontent.com/Julieisbaka/Dungeon-crawler-world/Main/Scheme/schema.json"
             }
         ],
         "commands": [
@@ -117,10 +116,6 @@
         "@types/node": "^22.x",
         "typescript": "^5.8.3",
         "@types/mocha": "^10.0.6",
-        "@typescript-eslint/eslint-plugin": "8.33.0",
-        "@typescript-eslint/parser": "8.33.0",
-        "eslint": "9.27.0",
-        "@microsoft/eslint-formatter-sarif": "^3.1.0",
         "@vscode/test-electron": "^2.2.0"
     },
     "scripts": {
